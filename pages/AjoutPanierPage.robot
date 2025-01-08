@@ -1,10 +1,14 @@
 *** Settings ***
 Library           OperatingSystem
 Library           SeleniumLibrary
-Variables         ./AjoutPanierlocators.py
+
 
 *** Variables ***
 ${url}    https://www.saucedemo.com/inventory.html
+${boutonAjout}    id:add-to-cart-sauce-labs-backpack
+${boutonPanier}    class:shopping_cart_link
+
+
 *** Test Cases ***
 Login avec username et password correctes
     [Documentation]    Login avec un username et un password corrects
